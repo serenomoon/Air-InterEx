@@ -1,0 +1,36 @@
+body a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body a:hover {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.container-foot {
+    background-color: black;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 50px;
+    color: white;
+    text-align: center;
+}
+
+.foot-cols {
+    margin: 0 20px;
+    display: inline-block;
+    text-align: left;
+}
+
+.mid-cols-a {
+    display: block;
+}
+
+.air-social {
+    margin: 20px auto;
+}
+
+.air-social a {
+    margin: auto 10px;
+}

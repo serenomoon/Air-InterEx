@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+.container {
+    font-family: 'Space Grotesk';
+}
+
+.earth-title {
+    margin: 80px auto 30px 50px;
+}
+
+.earth-p {
+    margin: 10px auto 30px 50px;
+}
+
+.carousel-inner {
+    height: 350px;
+}
+
+.carousel-inner .carousel-item {
+    height: 100%;
+    transform: translateY(-50%);
+}
+
+.place-cards {
+    position: relative;
+    margin: auto 30px;
+}
+
+.place-cards .row {
+    margin: auto 10px;
+    margin-top: 30px;
+}
+
+
+.place-cards .row .col .card{
+    margin: auto;
+    border-color: transparent;
+}
+
+.place-cards .row .col .card img{
+    height: 200px;
+    object-fit: cover
+}
+
+.place-cards .row .col .card p{
+    font-family: 'Arial';
+}
+
+.city-list {
+    margin-top: 60px;
+    margin-left: 10%;
+    margin-bottom: 30px;
+    
+}

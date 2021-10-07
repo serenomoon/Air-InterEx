@@ -1,0 +1,146 @@
+.navbar-custom {
+    background-color: black;
+    height: 100px;
+};
+
+
+.form-item{
+  position: relative;
+  width: 400px;
+}
+
+.custom-input {
+  width: 100%;
+}
+
+.custom-input .input-wrap {
+  position: relative;
+}
+
+.auth-page .theme-m {
+  min-width: auto;
+}
+
+.theme-m {
+  font-weight: 400;
+  color: #0e141e;
+  line-height: 1.2;
+  line-height: 1.2em;
+}
+
+
+.custom-input.theme-m .input {
+  box-shadow: inset 0 1px 4px rgba(0,0,0,.1), 0 0 0 transparent;
+  border: 1;
+  border-color: white;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+}
+
+.custom-input .input-wrap.has-icon.align-icon-left .padding-left{
+  padding-left: 38px
+}
+
+.custom-input.size-large .input {
+  height: 40px;
+  outline: none;
+  font-size: 18px;
+  width: 100%;
+}
+
+
+.custom-input .input-wrap.has-icon.align-icon-left .input-icon {
+  right: auto;
+  left: 7px;
+}
+
+.custom-input.theme-m .input-icon {
+  color: #738f93;
+}
+
+.custom-input .input-icon, .custom-input .input-loading {
+  position: absolute;
+  top: calc(50% - 2px);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.lupa {
+  color:white;
+}
+
+
+.form-item span{
+  position: absolute;
+  top: 11px;
+  left: 7px;
+  transition: visibility 0.5s, opacity 0.5s;
+  animation-name: error-fade-in;
+  animation-duration: 0.5s;
+}
+
+.dropdownButton {
+  background-color: transparent!important;
+  border: none!important;
+}
+
+.btn {
+  box-shadow: none!important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white!important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: coral!important;
+}
+
+.navbar-dark .navbar2 {
+  margin-left: 100px;
+}
+
+.navbar-dark .navbar-nav .navlink2 {
+  color: coral!important;
+}
+
+.navbar-dark .navbar-nav .navlink2:hover {
+  color: rgb(214, 91, 47)!important;
+}
+
+.dropdownMenu {
+  padding-top: 30px!important;
+  background-color: black!important;
+}
+
+.dropdowndiv {
+  margin-top: 10px!important;
+  display: block!important;
+  line-height: 1;
+}
+
+.dropdownItem {
+  color: white!important;
+  background-color: black!important;
+}
+
+.dropdownItemTitle {
+  font-weight: bold!important;
+  color: white!important;
+  background-color: black!important;
+}
+
+.dropdownItem:hover{
+  color: coral!important;
+}
+
+.dropdown-header {
+  font-size: 1.1rem!important;
+}
+
+.dropdownhr {
+  color: white;
+  width: 90%;
+  margin: auto;
+}

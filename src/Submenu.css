@@ -1,0 +1,24 @@
+.subnavbar {
+    padding-left: 10px;
+    position: sticky!important;
+    z-index: 1!important;
+    top: 0;
+}
+
+.subbrand:hover {
+    text-decoration: none;
+    color:rgb(238, 106, 58)!important;
+}
+
+.sublink:hover {
+    text-decoration: none;
+    color:rgb(238, 106, 58)!important;
+}
+
+.subnav-item {
+    position: relative;
+}
+
+.subnav-item svg{
+    margin-top: 150%;
+}
