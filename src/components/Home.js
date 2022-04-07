@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Home = (props) => {
+const Home = ({ farocket, fasuitcaserolling, facar, link }) => {
     return (
         <div>
         <div className="background">
@@ -9,14 +9,14 @@ const Home = (props) => {
         <div className="square">
           <div>
             <span style={{color:"coral", pointerEvents: "none"}}>Book your Trip</span>
-            <a href="#" className="square-link">Manage booking</a>
-            <a href="#" className="square-link">Check-in</a>
+            <a href={ link } className="square-link">Manage booking</a>
+            <a href={ link } className="square-link">Check-in</a>
           </div>
           <hr className="square-hr"></hr>
           <div className="fli-hot-rent">
-            <span style={{color:"coral", pointerEvents: "none"}}><FontAwesomeIcon icon={props.farocket}></FontAwesomeIcon> Book a flight</span>
-            <a href="#" className="square-link"><FontAwesomeIcon icon={props.fasuitcaserolling}></FontAwesomeIcon> Book a hotel</a>
-            <a href="#" className="square-link"><FontAwesomeIcon icon={props.facar}></FontAwesomeIcon> Rent a Car</a>
+            <span style={{color:"coral", pointerEvents: "none"}}><FontAwesomeIcon icon={farocket}></FontAwesomeIcon> Book a flight</span>
+            <a href={ link } className="square-link"><FontAwesomeIcon icon={fasuitcaserolling}></FontAwesomeIcon> Book a hotel</a>
+            <a href={ link } className="square-link"><FontAwesomeIcon icon={facar}></FontAwesomeIcon> Rent a Car</a>
           </div>
           <div className="square-fromto-box">
             <div className="square-fromto">

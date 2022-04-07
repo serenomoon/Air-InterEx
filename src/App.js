@@ -1,17 +1,20 @@
-import createPersistedState from 'use-persisted-state';
-import places from './json/place.json'
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import './App.css';
-import Menu from './Menu';
-import Foot from './Foot';
-import Home from './Home';
-import Planet from './Planet';
-import Submenu from './Submenu';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import createPersistedState from 'use-persisted-state';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
+import './App.css';
+import Menu from './components/Menu';
+import Foot from './components/Foot';
+import Home from './components/Home';
+import Planet from './components/Planet';
+import Submenu from './components/Submenu';
+
 import { faCar, faRocket, faSearch, faSuitcaseRolling, faAngleRight} from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faTwitter, faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons"
+
 import logo from './img/logo-viaje-w.png'
+import places from './json/place.json'
 
 
 const TITLE = 'Air InterEx'
@@ -22,7 +25,7 @@ const App = () => {
   const usePlanetState = createPersistedState('planet');
 
   const [planetlink, setPlanetlink] = usePlanetLinkState("/earth");
-  const [planet, setPlanet]= usePlanetState(places.earth);
+  const [{ name, title, paragraph, carousel, cards, cities }, setPlanet]= usePlanetState(places.earth);
 
   const onclickmenu = (e) => {
     const id = e.currentTarget.id
@@ -30,6 +33,7 @@ const App = () => {
     setPlanet(places[id]);
   }
   
+  // console.log(cards.first);
 
   return (
     <>
@@ -41,25 +45,26 @@ const App = () => {
     
     <Router>
       < Menu 
-        logo = {logo}
-        search = {faSearch}
-        onclickmenu = {onclickmenu}
-        id = {planetlink}
+        logo = { logo }
+        search = { faSearch }
+        onclickmenu = { onclickmenu }
+        id = { planetlink }
       />
       <Switch>
-        <Route exact path="/" component={Home}>
+        <Route exact path="/" component={ Home }>
           < Home
-            farocket = {faRocket}
-            facar = {faCar}
-            fasuitcaserolling = {faSuitcaseRolling}
+            farocket = { faRocket }
+            facar = { faCar }
+            fasuitcaserolling = { faSuitcaseRolling }
+            link={ "/" }
           />
         </Route>
-        <Route exact path={planetlink} component={Planet}>
+        <Route exact path={ planetlink } component={ Planet }>
 
-          { planet.name == "Earth" && 
+          { name === "Earth" && 
           < Submenu 
-            arrow = {faAngleRight}
-            planet1 = {planet.name}
+            arrow = { faAngleRight }
+            planet1 = { name }
             planet2 = "Mars"
             planet3 = "Europa"
             id1 = "earth"
@@ -70,10 +75,10 @@ const App = () => {
             to3 = "/europa"
             onclickmenu = {onclickmenu}
           />}
-          { planet.name == "Mars" && 
+          { name === "Mars" && 
           < Submenu 
             arrow = {faAngleRight}
-            planet1 = {planet.name}
+            planet1 = {name}
             planet2 = "Earth"
             planet3 = "Europa"
             id1 = "mars"
@@ -84,10 +89,10 @@ const App = () => {
             to3 = "/europa"
             onclickmenu = {onclickmenu}
           />}
-          { planet.name == "Europa" && 
+          { name === "Europa" && 
           < Submenu 
             arrow = {faAngleRight}
-            planet1 = {planet.name}
+            planet1 = {name}
             planet2 = "Earth"
             planet3 = "Mars"
             id1 = "europa"
@@ -98,7 +103,7 @@ const App = () => {
             to3 = "/mars"
             onclickmenu = {onclickmenu}
           />}
-          { planet.name == "Destinations" && 
+          { name === "Destinations" && 
           < Submenu 
             arrow = {faAngleRight}
             planet1 = "Earth"
@@ -113,73 +118,76 @@ const App = () => {
             onclickmenu = {onclickmenu}
           />}
 
-          { planetlink != "/destinations" &&
+          { planetlink !== "/destinations" &&
           < Planet
             id = {planetlink}
-            title = {planet.title}
-            paragraph = {planet.paragraph}
-            carousel1 = {planet.carousel[0]}
-            carousel2 = {planet.carousel[1]}
-            carousel3 = {planet.carousel[2]}
-            firsti = {planet.cards.first.img}
-            firstt = {planet.cards.first.title}
-            firstp = {planet.cards.first.paragraph}
-            firstb = {planet.cards.first.button}
-            secondi = {planet.cards.second.img}
-            secondt = {planet.cards.second.title}
-            secondp = {planet.cards.second.paragraph}
-            secondb = {planet.cards.second.button}
-            thirdi = {planet.cards.third.img}
-            thirdt = {planet.cards.third.title}
-            thirdp = {planet.cards.third.paragraph}
-            thirdb = {planet.cards.third.button}
-            fourthi = {planet.cards.fourth.img}
-            fourtht = {planet.cards.fourth.title}
-            fourthp = {planet.cards.fourth.paragraph}
-            fourthb = {planet.cards.fourth.button}
-            fifthi = {planet.cards.fifth.img}
-            fiftht = {planet.cards.fifth.title}
-            fifthp = {planet.cards.fifth.paragraph}
-            fifthb = {planet.cards.fifth.button}
-            sixthi = {planet.cards.sixth.img}
-            sixtht = {planet.cards.sixth.title}
-            sixthp = {planet.cards.sixth.paragraph}
-            sixthb = {planet.cards.sixth.button}
+            title = {title}
+            paragraph = {paragraph}
+            carousel1 = {carousel[0]}
+            carousel2 = {carousel[1]}
+            carousel3 = {carousel[2]}
+            cards = {cards}
+            firsti = {cards.first.img}
+            firstt = {cards.first.title}
+            firstp = {cards.first.paragraph}
+            firstb = {cards.first.button}
+            secondi = {cards.second.img}
+            secondt = {cards.second.title}
+            secondp = {cards.second.paragraph}
+            secondb = {cards.second.button}
+            thirdi = {cards.third.img}
+            thirdt = {cards.third.title}
+            thirdp = {cards.third.paragraph}
+            thirdb = {cards.third.button}
+            fourthi = {cards.fourth.img}
+            fourtht = {cards.fourth.title}
+            fourthp = {cards.fourth.paragraph}
+            fourthb = {cards.fourth.button}
+            fifthi = {cards.fifth.img}
+            fiftht = {cards.fifth.title}
+            fifthp = {cards.fifth.paragraph}
+            fifthb = {cards.fifth.button}
+            sixthi = {cards.sixth.img}
+            sixtht = {cards.sixth.title}
+            sixthp = {cards.sixth.paragraph}
+            sixthb = {cards.sixth.button}
 
-            citiest = {planet.cities.title}
-            cities1 = {planet.cities.city[0]}
-            cities2 = {planet.cities.city[1]}
-            cities3 = {planet.cities.city[2]}
-            cities4 = {planet.cities.city[3]}
-            cities5 = {planet.cities.city[4]}
-            cities6 = {planet.cities.city[5]}
-            cities7 = {planet.cities.city[6]}
-            cities8 = {planet.cities.city[7]}
-            cities9 = {planet.cities.city[8]}
-  
+            citiest = {cities.title}
+            cities1 = {cities.city[0]}
+            cities2 = {cities.city[1]}
+            cities3 = {cities.city[2]}
+            cities4 = {cities.city[3]}
+            cities5 = {cities.city[4]}
+            cities6 = {cities.city[5]}
+            cities7 = {cities.city[6]}
+            cities8 = {cities.city[7]}
+            cities9 = {cities.city[8]}
+
+            link = { "/" }
           />
         }
-        { planetlink == "/destinations" &&
+        { planetlink === "/destinations" &&
           < Planet
             id = {planetlink}
-            title = {planet.title}
-            paragraph = {planet.paragraph}
-            carousel1 = {planet.carousel[0]}
-            carousel2 = {planet.carousel[1]}
-            carousel3 = {planet.carousel[2]}
-            firsti = {planet.cards.first.img}
-            firstt = {planet.cards.first.title}
-            firstp = {planet.cards.first.paragraph}
-            firstb = {planet.cards.first.button}
-            secondi = {planet.cards.second.img}
-            secondt = {planet.cards.second.title}
-            secondp = {planet.cards.second.paragraph}
-            secondb = {planet.cards.second.button}
-            thirdi = {planet.cards.third.img}
-            thirdt = {planet.cards.third.title}
-            thirdp = {planet.cards.third.paragraph}
-            thirdb = {planet.cards.third.button}
-  
+            title = {title}
+            paragraph = {paragraph}
+            carousel1 = {carousel[0]}
+            carousel2 = {carousel[1]}
+            carousel3 = {carousel[2]}
+            firsti = {cards.first.img}
+            firstt = {cards.first.title}
+            firstp = {cards.first.paragraph}
+            firstb = {cards.first.button}
+            secondi = {cards.second.img}
+            secondt = {cards.second.title}
+            secondp = {cards.second.paragraph}
+            secondb = {cards.second.button}
+            thirdi = {cards.third.img}
+            thirdt = {cards.third.title}
+            thirdp = {cards.third.paragraph}
+            thirdb = {cards.third.button}
+
+            link = { "/" }
           />
         }
         </Route>
@@ -193,6 +201,7 @@ const App = () => {
       instagram = {faInstagram}
       twitter = {faTwitter}
       youtube = {faYoutube}
+      link= {"/"}
     />
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossOrigin="anonymous"></script>

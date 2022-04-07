@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from 'reactstrap';
 
-const Menu = (props) => {
+const Menu = ({ logo, onclickmenu, search, link }) => {
 
     const [dropdown, setDowndrop1]= useState(false);
     const [dropdown2, setDowndrop2]= useState(false);
@@ -13,44 +13,44 @@ const Menu = (props) => {
 
     const abrirDropdown=(e)=>{
         const id = e.currentTarget.id;
-        const consta =  eval("setDown"+id);
-        consta(true);
+        const drop = eval(id)
+        drop(true);
         
     }
 
     const cerrarDropdown=(e)=>{
         const id = e.currentTarget.id;
-        const consta =  eval("setDown"+id);
-        consta(false);
+        const drop = eval(id)
+        drop(false);
     }
 
     return(
         <div>
             <nav className="navbar-custom navbar navbar-expand-lg navbar-dark">
-                <Link to="/" className="navbar-brand"><img src={props.logo} height="36"></img>Air InterEx</Link>
+                <Link to="/" className="navbar-brand"><img src={logo} height="36" alt="img"></img>Air InterEx</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
-                    <Dropdown id="drop1" isOpen={dropdown} onMouseOver={abrirDropdown} onMouseLeave={cerrarDropdown}>
+                    <Dropdown id="setDowndrop1" isOpen={dropdown} onMouseOver={abrirDropdown} onMouseLeave={cerrarDropdown}>
                         <DropdownToggle className="dropdownButton nav-link">Plan</DropdownToggle>
                         <DropdownMenu className="dropdownMenu">
-                            <DropdownItem className="dropdownItemTitle" id="destinations" onClick={props.onclickmenu}><Link to="/destinations">Destination</Link></DropdownItem>
+                            <DropdownItem className="dropdownItemTitle" id="destinations" onClick={onclickmenu}><Link to="/destinations">Destination</Link></DropdownItem>
                             <div className="dropdowndiv">
-                                <DropdownItem className="dropdownItem" id="earth" onClick={props.onclickmenu}><Link to="/earth">Earth</Link></DropdownItem>
+                                <DropdownItem className="dropdownItem" id="earth" onClick={onclickmenu}><Link to="/earth">Earth</Link></DropdownItem>
                             </div>
                             <div className="dropdowndiv">
-                                <DropdownItem className="dropdownItem" id="mars" onClick={props.onclickmenu}><Link to="/mars">Mars</Link></DropdownItem>
+                                <DropdownItem className="dropdownItem" id="mars" onClick={onclickmenu}><Link to="/mars">Mars</Link></DropdownItem>
                             </div>
                             <div className="dropdowndiv">
-                                <DropdownItem className="dropdownItem" id="europa" onClick={props.onclickmenu}><Link to="/europa">Europa (Jupiter)</Link></DropdownItem>
+                                <DropdownItem className="dropdownItem" id="europa" onClick={onclickmenu}><Link to="/europa">Europa (Jupiter)</Link></DropdownItem>
                             </div>
                         </DropdownMenu>
                     </Dropdown>
                     
-                    <Dropdown id="drop2" isOpen={dropdown2} onMouseOver={abrirDropdown} onMouseLeave={cerrarDropdown}>
+                    <Dropdown id="setDowndrop2" isOpen={dropdown2} onMouseOver={abrirDropdown} onMouseLeave={cerrarDropdown}>
                         <DropdownToggle className="dropdownButton nav-link">Book</DropdownToggle>
                         <DropdownMenu className="dropdownMenu">
                             <DropdownItem header>Hotels</DropdownItem>
@@ -75,7 +75,7 @@ const Menu = (props) => {
                         </DropdownMenu>
                     </Dropdown>
 
-                    <Dropdown id="drop3" isOpen={dropdown3} onMouseOver={abrirDropdown} onMouseLeave={cerrarDropdown}>
+                    <Dropdown id="setDowndrop3" isOpen={dropdown3} onMouseOver={abrirDropdown} onMouseLeave={cerrarDropdown}>
                         <DropdownToggle className="dropdownButton nav-link">Experience</DropdownToggle>
                         <DropdownMenu className="dropdownMenu">
                             <DropdownItem header>At the Spaceport</DropdownItem>
@@ -100,7 +100,7 @@ const Menu = (props) => {
                         </DropdownMenu>
                     </Dropdown>
 
-                    <Dropdown id="drop4" isOpen={dropdown4} onMouseOver={abrirDropdown} onMouseLeave={cerrarDropdown}>
+                    <Dropdown id="setDowndrop4" isOpen={dropdown4} onMouseOver={abrirDropdown} onMouseLeave={cerrarDropdown}>
                         <DropdownToggle className="dropdownButton nav-link">Airpoints</DropdownToggle>
                         <DropdownMenu className="dropdownMenu">
                             <DropdownItem header>Hotels</DropdownItem>
@@ -131,16 +131,16 @@ const Menu = (props) => {
                             <div className="input-wrap align-icon-left has-icon">
                                 <input type="text" placeholder="Search" className="input padding-left"></input>
                                 <span  select="input-icon">
-                                <FontAwesomeIcon className="lupa" icon={props.search}></FontAwesomeIcon>
+                                <FontAwesomeIcon className="lupa" icon={search}></FontAwesomeIcon>
                                 </span>
                             </div>
                         </div>
                     </div>
                     <ul className="navbar-nav mr-auto navbar2">
                     <div className="collapse navbar-collapse">
-                    <a className="nav-link navlink2" href="#">Manage Booking</a>
-                    <a className="nav-link navlink2" href="#">Check In</a>
-                    <a className="nav-link navlink2" href="#">Sign In</a>
+                    <a className="nav-link navlink2" href={ link }>Manage Booking</a>
+                    <a className="nav-link navlink2" href={ link }>Check In</a>
+                    <a className="nav-link navlink2" href={ link }>Sign In</a>
                     </div>
                     </ul>
                 </div>
