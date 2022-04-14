@@ -6,26 +6,26 @@
         "carousel":["https://media.wired.com/photos/59328d3f4dc9b45ccec5ee25/master/pass/PIA17998_fig1a.jpg",
                     "https://scx2.b-cdn.net/gfx/news/2019/whatmoonsino.jpg",
                     "https://physicsworld.com/wp-content/uploads/2019/06/PWJul19Siegel-frontis_HERO-1024x576.jpg"],
-        "cards": {
-            "first": {
+        "cards":[ 
+             {
                 "img":"https://cdn.mos.cms.futurecdn.net/n3jFt7cqbddTJa3fKhPzja-1200-80.jpg",
                 "title":"Earth",
                 "paragraph":"Planet Earth is our first home and one of the most beautiful. It has varied ecosystems, ideal for families who are interested in wildlife.",
                 "button":"Visit Earth"
             },
-            "second":{
+            {
                 "img":"https://p4.wallpaperbetter.com/wallpaper/818/684/17/mars-planet-desktop-backgrounds-wallpaper-preview.jpg",
                 "title":"Mars",
                 "paragraph":"With great deserts and with the highest mountain in the solar system, it is a good place for brave explorers and adventurers.",
                 "button":"Visit Mars"
             },
-            "third":{
+            {
                 "img":"https://masalladelatierra.com/wp-content/uploads/2020/05/europa-satelite-12.jpg",
                 "title":"Europa",
                 "paragraph":"Europa has the smoothest surface of any known solid object in the Solar System, it is perfect for lovers of winter sports and travel for couples who want to experience a unique moment.",
                 "button":"Visit Europa"
             }
-        }
+        ]
     },
     "earth": {
         "name": "Earth",
@@ -34,44 +34,44 @@
         "carousel":["https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/screen-shot-2018-07-11-at-5-10-02-pm-1531412351.png",
                     "http://1.bp.blogspot.com/-L4PRek3UKGM/ViJWWILHWDI/AAAAAAAAAk0/6LR6nvAFG-Q/s1600/Landscapes%2BHD%2Bimages%2BMBW.jpg",
                     "https://www.desktopbackground.org/p/2012/10/11/466584_digital-design-world-landscapes-capricorn-nature-trong-full-hd_1920x1200_h.jpg"],
-        "cards": {
-            "first": {
+        "cards": [
+            {
                 "img":"https://content.skyscnr.com/m/3dd5ddbd5da36698/original/GettyImages-452680481_doc.jpg?resize=1800px:1800px&quality=100",
                 "title":"Machu Picchu, Perú",
                 "paragraph":"Machu Picchu is one of those places that must be enjoyed at least once in a lifetime.",
                 "button":"Explore Machi Picchu"
             },
-            "second":{
+            {
                 "img":"https://content.skyscnr.com/m/62e6e2604995961c/original/GettyImages-496113219.jpg?resize=1800px:1800px&quality=100",
                 "title":"Angkor, Camboya",
                 "paragraph":"The ancient Khmer empire and considered the largest religious structure on planet Earth.",
                 "button":"Explore Angkor"
             },
-            "third":{
+            {
                 "img":"https://content.skyscnr.com/m/3747ec5030089541/original/GettyImages-160624226.jpg?resize=1800px:1800px&quality=100",
                 "title":"Taj Mahal, Agra, India",
                 "paragraph":"One of the most beautiful buildings on planet Earth and the greatest work ever built for love.",
                 "button":"Explore Taj Mahal"
             },
-            "fourth":{
+            {
                 "img":"https://content.skyscnr.com/m/2b8739b75450c3da/original/GettyImages-464257809.jpg?resize=1800px:1800px&quality=100",
                 "title":"Petra, Jordania",
                 "paragraph":"Cross the Siq first thing in the morning to find yourself in front of the Treasury, the wonders of Petra.",
                 "button":"Explore Petra"
             },
-            "fifth":{
+            {
                 "img":"https://content.skyscnr.com/m/677f038b3c662614/original/GettyImages-463358491.jpg?resize=1800px:1800px&quality=100",
                 "title":"Great Wall, China",
                 "paragraph":"One of the most famous places on planet Earth, you can see it from space.",
                 "button":"Explore the Great Wall"
             },
-            "sixth":{
+            {
                 "img":"https://content.skyscnr.com/m/25adda91669a1d75/original/GettyImages-466024975_doc.jpg?resize=1800px:1800px&quality=100",
                 "title":"Easter Island, Chile",
                 "paragraph":"A land of an ancient culture, centuries-old traditions, amazing volcanoes and mysterious figures.",
                 "button":"Explore Easter Island"
             }
-        },
+        ],
         "cities": {
             "title":"The best cities on planet Earth to visit",
             "city":["París, Francia","Nueva York, Estados Unidos","Londres, Inglaterra, Reino Unido","Venecia, Italia","Barcelona, Cataluña, España","Roma, Italia","Río de Janeiro, Brasil","Buenos Aires, Argentina","Hong Kong"]
@@ -84,44 +84,44 @@
         "carousel":["https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/future-mars-colonists-playing-with-children-royalty-free-illustration-1629809249.jpg",
                     "https://i.pinimg.com/736x/4f/80/6a/4f806a54ea775e68c9e4898c1daab1e5.jpg",
                     "https://images1.calcalist.co.il/PicServer3/2020/12/02/1040969/1LM.jpg"],
-        "cards": {
-            "first": {
+        "cards": [
+            {
                 "img":"https://live.staticflickr.com/65535/50148520497_5db0a72aa2_b.jpg",
                 "title":"Hellas Planitia",
                 "paragraph":"With a diameter of about 2,300 km, it is the largest unambiguous impact structure on the planet.",
                 "button":"Explore Hellas"
             },
-            "second":{
+            {
                 "img":"https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2004/09/solis_planum_perspective_view_looking_north-east/9926394-2-eng-GB/Solis_Planum_perspective_view_looking_north-east_article.jpg",
                 "title":"Solis Planum",
                 "paragraph":"Solis Planum was named after a classic albedo feature name, and its name was approved in 1973.",
                 "button":"Explore Solis"
             },
-            "third":{
+            {
                 "img":"https://upload.wikimedia.org/wikipedia/commons/7/7a/Mars_Viking_21i093.png",
                 "title":"Utopia Planitia",
                 "paragraph":"The place where the main shipyard of the United Federation of Planets is located.",
                 "button":"Explore Utopia"
             },
-            "fourth":{
+            {
                 "img":"https://lowell.edu/wp-content/uploads/2020/09/maxresdefault.jpg",
                 "title":"Olympus Mons",
                 "paragraph":"Olympus Mons is about two and a half times Mount Everest's (Planet Earth) height above sea level.",
                 "button":"Explore Olympus"
             },
-            "fifth":{
+            {
                 "img":"https://image.cnbcfm.com/api/v1/image/105932449-1558716242215aispacemarspodslandscape.jpeg?v=1558716267",
                 "title":"Arcadia Planitia",
                 "paragraph":"Arcadia Planitia is a smooth plain with fresh lava flows, perfect for a romantic walk.",
                 "button":"Explore Arcadia"
             },
-            "sixth":{
+            {
                 "img":"https://images.adsttc.com/media/images/59cb/ba4b/b22e/383c/4000/0035/large_jpg/Mars_Science_City2.jpg?1506523718",
                 "title":"Noachis Terra",
                 "paragraph":"Visit the city of Noachis One with your family, and enjoy the hustle and bustle of the long nights.",
                 "button":"Explore Noachis"
             }
-        },
+        ],
         "cities": {
             "title":"The best cities on planet Mars to visit",
             "city":["París, Francia","Nueva York, Estados Unidos","Londres, Inglaterra, Reino Unido","Venecia, Italia","Barcelona, Cataluña, España","Roma, Italia","Río de Janeiro, Brasil","Buenos Aires, Argentina","Hong Kong"]
@@ -134,44 +134,44 @@
         "carousel":["https://cbsnews3.cbsistatic.com/hub/i/r/2015/07/06/9fb44928-d374-44a1-a1e3-084cc0ffaa8e/thumbnail/1200x630/2f155458a32636a3eaa7b21df42a7475/blood-redscarsandveinsoneuropa.jpg",
                     "http://cdn.sci-news.com/images/enlarge5/image_6483e-Penitentes.jpg",
                     "https://esahubble.org/media/archives/art/screen/frank_hettick_1.jpg"],
-        "cards": {
-            "first": {
+        "cards": [
+            {
                 "img":"https://www.nasa.gov/sites/default/files/thumbnails/image/pia23871_-_1st_in_gallery.jpg",
                 "title":"Chaos Transition",
                 "paragraph":"Europa features a widely varied landscape, including ridges, bands, small rounded domes and disrupted spaces.",
                 "button":"Explore Chaos"
             },
-            "second":{
+            {
                 "img":"https://images.livemint.com/img/2019/11/20/600x338/76587ad4-bd20-11e9-be68-67bc3b8e042c_1565936136357_1574252881555.jpg",
                 "title":"Crisscrossing Bands",
                 "paragraph":"The long, linear ridges and bands that crisscross Europa's surface, perfect to play hide and seek.",
                 "button":"Explore Crisscrossing"
             },
-            "third":{
+            {
                 "img":"https://pbs.twimg.com/media/CzcoCUkUAAA7IEj.jpg",
                 "title":"Harmonia Linea",
                 "paragraph":"Home of the first settler and the greenest place on the planet.",
                 "button":"Explore Harmonia"
             },
-            "fourth":{
+            {
                 "img":"https://jokeronthesofa.files.wordpress.com/2018/06/fireflyep11malnaked.jpg?w=660",
                 "title":"Moytura Regio",
                 "paragraph":"Stroll through the plains of Moytura and enjoy the wind on your skin.",
                 "button":"Explore Moytura"
             },
-            "fifth":{
+            {
                 "img":"https://narcolepticos.com/wp-content/uploads/2016/09/Tatooine.jpg",
                 "title":"Agenor",
                 "paragraph":"Home of the first indigenous communities of the satellite.",
                 "button":"Explore Agenor"
             },
-            "sixth":{
+            {
                 "img":"https://i.pinimg.com/originals/d6/b2/78/d6b27870206929d89f01011b15b6c778.jpg",
                 "title":"Corick Linea",
                 "paragraph":"Spend a romantic night in the best hotels in Europe, visit Corick.",
                 "button":"Explore Corick"
             }
-        },
+        ],
         "cities": {
             "title":"The best cities on satellite Europa to visit",
             "city":["París, Francia","Nueva York, Estados Unidos","Londres, Inglaterra, Reino Unido","Venecia, Italia","Barcelona, Cataluña, España","Roma, Italia","Río de Janeiro, Brasil","Buenos Aires, Argentina","Hong Kong"]

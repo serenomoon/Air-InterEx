@@ -33,7 +33,6 @@ const App = () => {
     setPlanet(places[id]);
   }
   
-  // console.log(cards.first);
 
   return (
     <>
@@ -123,45 +122,11 @@ const App = () => {
             id = {planetlink}
             title = {title}
             paragraph = {paragraph}
-            carousel1 = {carousel[0]}
-            carousel2 = {carousel[1]}
-            carousel3 = {carousel[2]}
+            carousel = {carousel}
             cards = {cards}
-            firsti = {cards.first.img}
-            firstt = {cards.first.title}
-            firstp = {cards.first.paragraph}
-            firstb = {cards.first.button}
-            secondi = {cards.second.img}
-            secondt = {cards.second.title}
-            secondp = {cards.second.paragraph}
-            secondb = {cards.second.button}
-            thirdi = {cards.third.img}
-            thirdt = {cards.third.title}
-            thirdp = {cards.third.paragraph}
-            thirdb = {cards.third.button}
-            fourthi = {cards.fourth.img}
-            fourtht = {cards.fourth.title}
-            fourthp = {cards.fourth.paragraph}
-            fourthb = {cards.fourth.button}
-            fifthi = {cards.fifth.img}
-            fiftht = {cards.fifth.title}
-            fifthp = {cards.fifth.paragraph}
-            fifthb = {cards.fifth.button}
-            sixthi = {cards.sixth.img}
-            sixtht = {cards.sixth.title}
-            sixthp = {cards.sixth.paragraph}
-            sixthb = {cards.sixth.button}
 
             citiest = {cities.title}
-            cities1 = {cities.city[0]}
-            cities2 = {cities.city[1]}
-            cities3 = {cities.city[2]}
-            cities4 = {cities.city[3]}
-            cities5 = {cities.city[4]}
-            cities6 = {cities.city[5]}
-            cities7 = {cities.city[6]}
-            cities8 = {cities.city[7]}
-            cities9 = {cities.city[8]}
+            cities = {cities.city}
 
             link = { "/" }
           />
@@ -171,21 +136,8 @@ const App = () => {
             id = {planetlink}
             title = {title}
             paragraph = {paragraph}
-            carousel1 = {carousel[0]}
-            carousel2 = {carousel[1]}
-            carousel3 = {carousel[2]}
-            firsti = {cards.first.img}
-            firstt = {cards.first.title}
-            firstp = {cards.first.paragraph}
-            firstb = {cards.first.button}
-            secondi = {cards.second.img}
-            secondt = {cards.second.title}
-            secondp = {cards.second.paragraph}
-            secondb = {cards.second.button}
-            thirdi = {cards.third.img}
-            thirdt = {cards.third.title}
-            thirdp = {cards.third.paragraph}
-            thirdb = {cards.third.button}
+            carousel = {carousel}
+            cards = {cards}
 
             link = { "/" }
           />

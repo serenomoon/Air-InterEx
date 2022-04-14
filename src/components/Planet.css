@@ -34,17 +34,18 @@
 }
 
 
-.place-cards .row .col .card{
+.place-cards .row .col-4 .card{
     margin: auto;
     border-color: transparent;
 }
 
-.place-cards .row .col .card img{
+.place-cards .row .col-4 .card img{
     height: 200px;
     object-fit: cover
 }
 
-.place-cards .row .col .card p{
+
+.place-cards .row .col-4 .card p{
     font-family: 'Arial';
 }
 
