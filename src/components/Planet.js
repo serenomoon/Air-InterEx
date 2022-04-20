@@ -1,6 +1,7 @@
 import './Planet.css';
 
-const Planet = ({ cards , link, id, title, paragraph, carousel, citiest, cities })=>{
+export const Planet = ({ cards , link, id, title, paragraph, carousel, citiest, cities })=>{
+    
     if(id !== "/destinations"){
 
 
@@ -80,7 +81,6 @@ const Planet = ({ cards , link, id, title, paragraph, carousel, citiest, cities 
                 </div>
                 <div className="carousel-inner">
                     {carousel.map( (carou,i )=> {
-                        console.log(carou);
                         return(
                             <div className={ i === 0 ? "carousel-item active" : "carousel-item" }>
                                 <img src={ carou } className="d-block w-100" alt="..."></img>
@@ -121,6 +121,4 @@ const Planet = ({ cards , link, id, title, paragraph, carousel, citiest, cities 
             </div>
         </div>
         )}
-}
-
-export default Planet;
+};

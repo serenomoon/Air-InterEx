@@ -1,6 +1,34 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
+import { useForm } from "../hooks/useForm";
 
-const Home = ({ farocket, fasuitcaserolling, facar, link }) => {
+
+const Home = ({ handleAddFly, farocket, fasuitcaserolling, facar, link }) => {
+
+  const [{from, to}, handleInputChange, reset] = useForm({
+    from: '',
+    to: ''
+  });
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+
+    if( from.trim().length <= 1 && to.trim().length <= 1 ){
+        return;
+    };
+
+    const newFly = {
+        id: new Date().getTime(),
+        from: from,
+        to: to
+    };
+
+    handleAddFly( newFly );
+
+    reset();
+
+}
+
     return (
         <div>
         <div className="background">
@@ -18,16 +46,45 @@ const Home = ({ farocket, fasuitcaserolling, facar, link }) => {
             <a href={ link } className="square-link"><FontAwesomeIcon icon={fasuitcaserolling}></FontAwesomeIcon> Book a hotel</a>
             <a href={ link } className="square-link"><FontAwesomeIcon icon={facar}></FontAwesomeIcon> Rent a Car</a>
           </div>
+
           <div className="square-fromto-box">
-            <div className="square-fromto">
-              <span className="square-span">From</span>
-              <input className="square-input" placeholder="Planet Or Country + City"></input>
-            </div>
-            <div className="square-fromto">
-              <span className="square-span">To</span>
-              <input className="square-input" placeholder="Airport City"></input>
-            </div>
-            <button className="btn btn-primary mid-cols-button continue-btn" type="submit">Continue</button>
+            <form onSubmit={ handleSubmit }>
+
+              <div className="square-fromto">
+                <span className="square-span">From</span>
+                  <input 
+                    type="text"
+                    name="from" 
+                    className="square-input" 
+                    placeholder="Planet Or Country + City"
+                    value={ from }
+                    onChange={ handleInputChange }
+                  /> 
+              </div>
+
+              <div className="square-fromto">
+                <span className="square-span">To</span>
+                <input 
+                    type="text"
+                    name="to" 
+                    className="square-input" 
+                    placeholder="Airport City"
+                    value={ to }
+                    onChange={ handleInputChange }
+                  /> 
+              </div>
+
+              {/* Debe redireccionar */}
+              <a href="/startfly">
+              <button 
+                className="btn btn-primary mid-cols-button continue-btn" 
+                type="submit"
+                >
+                  Continue
+              </button>
+              </a>
+            
+            </form>
           </div>
         </div>
       </div>
