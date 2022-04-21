@@ -24,7 +24,7 @@ const App = () => {
 
 
     useEffect(() => {
-      //si 'todos' cambia, cambia los datos en el localstorage del navegador (almacena o borra)
+      //si 'flyes' cambia, cambia los datos en el localstorage del navegador (almacena o borra)
       localStorage.setItem('flyes', JSON.stringify( flyes ));
     }, [flyes])
 
@@ -44,7 +44,6 @@ const App = () => {
         payload: flyId
       } );
 }
-
   return (
     <>
     <Helmet>
@@ -55,8 +54,8 @@ const App = () => {
     
     <AppRouter 
       handleAddFly = { handleAddFly }
-      from = {flyes.from}
-      to = {flyes.to}
+      from = {flyes[0].from}
+      to = {flyes[0].to}
     />
     
 

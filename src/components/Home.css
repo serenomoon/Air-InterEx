@@ -1,0 +1,20 @@
+body {
+    color: white!important;
+}
+
+.square {
+    position: absolute;
+}
+
+.collapse { 
+
+    background-color: black;
+}
+
+span {
+    color: grey;
+}
+
+.passenger-input {
+    width: 30px;
+}
